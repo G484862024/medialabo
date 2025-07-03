@@ -1,0 +1,4 @@
+function tashizan(){
+
+    let i=
+}
