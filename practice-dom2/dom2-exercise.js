@@ -16,3 +16,15 @@ let gakka = [
 
 //////////////// ここから下にプログラムを書きたそう!
 
+function show(){
+	let l=querySelectorAll('h2#addr');
+	let p=document.createElement('p');
+	p.textContent=Campas.address;
+	l.insertAdjacentElement('afterend',p);
+
+	let h=document.createElement('li');
+	let u=document.createElement('ul');
+	l=document.querySelector('h2#dept');
+	l.insertAdjacentElement('afterend',u);
+	u.insertAdjacentElement('afterend',l);
+}
