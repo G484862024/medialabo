@@ -8,15 +8,15 @@ let kaisu=0;
 //予想を4回実行する
 //将来以下のhantei();の4回の呼び出しを全て削除する
 //代わりにここでは、ボタンを押したらhantei()を呼び出すイベント処理をする
-hantei();
-hantei();
-hantei();
-hantei();
+let kazuate=document.querySelector('button#check');
+kazuate.addEventListener('click',hantei);
 
 //ボタンを押した後の処理をする関数hantei()の定義
 function hantei(){
     //将来ここでは４ではなくテキストボックスに指定された数値をyosoに代入する
-    let yoso=4;
+    
+    let a=document.querySelector('input[name=yoso]');
+    yoso=Number(a.value);
     kaisu=kaisu+1;
     console.log(kaisu+'回目の予想:'+yoso);
     if(kaisu>3){
