@@ -1,27 +1,62 @@
 
 // 課題3-2 のプログラムはこの関数の中に記述すること
 function print(data) {
-  console.log(data.g1);          
+    for (let item of data.list.g1) {
+      console.log("タイトル: " + item.title);
+      console.log("出演者: " + (item.act || "情報なし"));
+      console.log("放送時間: " + item.start_time + " ～ " + item.end_time);
+      console.log("----------------------------");
+    }
 }
 
 // 課題5-1 の関数 printDom() はここに記述すること
 function printDom(data) {
+  let resultDiv =document.createElement('div');
+  resultDiv.id='result';
+  document.body.appendChild(resultDiv);
+  
+  let start = document.createElement('p');
+    start.textContent = "開始時刻: " + data.start_time;
+    
+  let end =document.createElement('p');
+    end.textContent="終了時刻"+data.end_time;
+   let title=document.createElement('p');
+   title.textContent="タイトル"+data.title;
+
+   let ex=document.createElement('p');
+   ex.textContent="番組説明"+data.content;
+
+   let act=document.createElement('p');
+   act.textContent="出演者"+data.act;
 
 }
 
 // 課題6-1 のイベントハンドラ登録処理は以下に記述
 
-
+let b=document.querySelector('#sendRequest');
+b.addEventListener('click',sendRequest);
 
 
 // 課題6-1 のイベントハンドラ sendRequest() の定義
 function sendRequest() {
+  let url=https://www.nishita-lab.org/web-contents/jsons/nhk/{service}-{genre}-j.json;
 
+  axios.get(url)
+    .then(showResult)
+    .catch(showError)
+    .then(finish);
 }
 
 // 課題6-1: 通信が成功した時の処理は以下に記述
 function showResult(resp) {
+  let data=resp.data;
 
+  if(typeof data=='string'){
+    data =JSON.parse(data);
+  }
+
+  console.log(data);
+  console.log(data.x)
 }
 
 // 課題6-1: 通信エラーが発生した時の処理
