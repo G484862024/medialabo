@@ -10,64 +10,62 @@ function print(data) {
 }
 
 // 課題5-1 の関数 printDom() はここに記述すること
-function printDom(data) {
-  let resultDiv =document.createElement('div');
-  resultDiv.id='result';
-  document.body.appendChild(resultDiv);
+//function printDom(data) {
+  //let resultDiv =document.createElement('div');
+  //resultDiv.id='result';
+  //document.body.appendChild(resultDiv);
   
-  let start = document.createElement('p');
-    start.textContent = "開始時刻: " + data.start_time;
+  //let start = document.createElement('p');
+    //start.textContent = "開始時刻: " + data.start_time;
     
-  let end =document.createElement('p');
-    end.textContent="終了時刻"+data.end_time;
-   let title=document.createElement('p');
-   title.textContent="タイトル"+data.title;
+  //let end =document.createElement('p');
+    //end.textContent="終了時刻"+data.end_time;
+   //let title=document.createElement('p');
+   //title.textContent="タイトル"+data.title;
 
-   let ex=document.createElement('p');
-   ex.textContent="番組説明"+data.content;
+   //let ex=document.createElement('p');
+   //ex.textContent="番組説明"+data.content;
 
-   let act=document.createElement('p');
-   act.textContent="出演者"+data.act;
-
-}
+   //let act=document.createElement('p');
+   //act.textContent="出演者"+data.act;}
 
 // 課題6-1 のイベントハンドラ登録処理は以下に記述
 
-let b=document.querySelector('#sendRequest');
-b.addEventListener('click',sendRequest);
+//let b=document.querySelector('#sendRequest');
+//b.addEventListener('click',sendRequest);
 
 
 // 課題6-1 のイベントハンドラ sendRequest() の定義
-function sendRequest() {
-  let url=https://www.nishita-lab.org/web-contents/jsons/nhk/{service}-{genre}-j.json;
+//function sendRequest() {
+  //let url=https://www.nishita-lab.org/web-contents/jsons/nhk/{service}-{genre}-j.json;
 
-  axios.get(url)
-    .then(showResult)
-    .catch(showError)
-    .then(finish);
-}
+  //axios.get(url)
+    //.then(showResult)
+    //.catch(showError)
+    //.then(finish);
+//}
 
 // 課題6-1: 通信が成功した時の処理は以下に記述
-function showResult(resp) {
-  let data=resp.data;
+//function showResult(resp) {
+  //let data=resp.data;
 
-  if(typeof data=='string'){
-    data =JSON.parse(data);
-  }
+  //if(typeof data=='string'){
+    //data =JSON.parse(data);
+  //}
 
-  console.log(data);
-  console.log(data.x)
-}
+  //console.log(data);
+  //console.log(data.x)
+//}
 
 // 課題6-1: 通信エラーが発生した時の処理
-function showError(err) {
-    console.log(err);
-}
+//function showError(err) {
+  //  console.log(err);
+//}
 
 // 課題6-1: 通信の最後にいつも実行する処理
-function finish() {
-    console.log('Ajax 通信が終わりました');
-}
+//function finish() {
+ //   console.log('Ajax 通信が終わりました');
+//}
 
 ////////////////////////////////////////
 // 以下はテレビ番組表のデータサンプル
