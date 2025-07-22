@@ -1,5 +1,5 @@
 h1{
-  background: #05445e;
+  background:rgb(90, 77, 231);
   padding: 0.5em;
 }
 h1{
@@ -11,9 +11,11 @@ body{
 }
 
 h2{
-    background:rgb(75, 75, 231);
+    background:rgb(110, 100, 230);
+    color:rgb(231, 228, 228);
 }
 
 h3{
-    background:rgb(100, 100, 232);
+    background:rgb(139, 131, 234);
+    color:rgb(231, 228, 228);
 }
