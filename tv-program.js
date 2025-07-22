@@ -15,7 +15,10 @@ function printDom(data) {
   resultDiv.id='result';
   document.body.appendChild(resultDiv);
 
-  for (let item of data.list.g1) {
+  let t=document.querySelector("#channel").value;
+  let datalist=data.List[x];
+
+  for (let item of datalist) {
     let title=document.createElement('p');
     title.textContent="タイトル:"+item.title;
 
@@ -45,19 +48,22 @@ function printDom(data) {
 
 // 課題6-1 のイベントハンドラ登録処理は以下に記述
 
-let b=document.querySelector('#sendRequest');
+let b=document.querySelector('#print');
 b.addEventListener('click',sendRequest);
 
 
 // 課題6-1 のイベントハンドラ sendRequest() の定義
 function sendRequest() {
-  let url=’https://www.nishita-lab.org/web-contents/jsons/nhk/{service}-{genre}-j.json’;
+  let x=document.querySelector("#channel").value;
+  let y=document.querySelector("#jannru").value;
+  let url = `https://www.nishita-lab.org/web-contents/jsons/nhk/${x}-${y}-j.json`;
 
   axios.get(url)
     .then(showResult)
     .catch(showError)
     .then(finish);
 }
+
 
 // 課題6-1: 通信が成功した時の処理は以下に記述
 function showResult(resp) {
