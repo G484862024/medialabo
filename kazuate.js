@@ -27,8 +27,7 @@ function hantei(){
     yosomiru.textContent = kaisu + '回の予想: ' + yoso;
 
     let c=document.querySelector('p#result');
-    c.textContent=kaisu+'回の予想:'+yoso;
-
+   
 
     //課題3-1:正解判定する
     //kotaeとyosoが一致するかどうか調べて結果を出力
