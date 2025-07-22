@@ -18,7 +18,7 @@ function hantei(){
     let a=document.querySelector('input[name=yoso]');
     let yoso=Number(a.value);
     kaisu=kaisu+1;
-    console.log(kaisu+'回目の予想:'+yoso);
+    
 
     let b=document.querySelector('span#kaisu');
     b.textContent=kaisu;
