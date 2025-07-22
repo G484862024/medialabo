@@ -24,7 +24,7 @@ function hantei(){
     b.textContent=kaisu;
 
     let yosomiru=document.querySelector('p#yosomiru');
-    yosomiru.textContent = kaisu+'回の予想: '+yoso;
+    yosomiru.textContent = yoso;
 
     let c=document.querySelector('p#result');
    
@@ -48,7 +48,7 @@ function hantei(){
     }else if(kaisu===3){
         if (yoso==kotae){
             console.log('正解。答えは'+kotae+'でした');
-            c.textConstent='正解。答えは'+kotae+'でした';
+            c.textContent='正解。答えは'+kotae+'でした';
         }else{
         console.log('間違い。答えは'+kotae+'でした');
         c.textContent='間違い。答えは'+kotae+'でした';
