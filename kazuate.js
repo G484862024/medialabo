@@ -22,7 +22,7 @@ function hantei(){
     let b=document.querySelector('span#kaisu');
     b.textContent=kaisu;
     let c=document.querySelector('p#result');
-    c.textContent=kaisu+'回の予想'+yoso;
+    c.textContent=kaisu+'回の予想:'+yoso;
 
 
     //課題3-1:正解判定する
