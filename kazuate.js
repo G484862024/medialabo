@@ -46,6 +46,10 @@ function hantei(){
             c.textContent='間違い。答えはもっと小さいです';
         }
     }else if(kaisu===3){
+        if (yoso==kotae){
+            console.log('正解。答えは'+kotae+'でした');
+            c.textConstent='正解。答えは'+kotae+'でした';
+        }
         console.log('間違い。答えは'+kotae+'でした');
         c.textContent='間違い。答えは'+kotae+'でした';
     }else{
