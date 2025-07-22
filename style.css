@@ -1,5 +1,5 @@
 h1{
-  background:rgb(38, 19, 237);
+  background:#2b799e;
   padding: 0.5em;
 }
 h1{
@@ -7,15 +7,15 @@ h1{
 }
 
 body{
-    background-color: #d0e8f3;
+    background-color: #addef5;
 }
 
 h2{
-    background:rgb(72, 57, 233);
+    background:#499fc7;
     color:rgb(231, 228, 228);
 }
 
 h3{
-    background:rgb(116, 105, 240);
+    background:#7bc3e5;
     color:rgb(231, 228, 228);
 }
