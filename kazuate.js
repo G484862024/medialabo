@@ -24,7 +24,7 @@ function hantei(){
     b.textContent=kaisu;
 
     let yosomiru=document.querySelector('p#yosomiru');
-    yosomiru.textContent = yoso;
+    yosomiru.textContent=yoso;
 
     let c=document.querySelector('p#result');
    
