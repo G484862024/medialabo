@@ -39,11 +39,11 @@ function hantei(){
             c.textContent='間違い。答えはもっと大きいです';
         }else if(yoso>kotae){
             console.log('間違い。答えはもっと小さいです');
-            c.textContent('間違い。答えはもっと小さいです');
+            c.textContent='間違い。答えはもっと小さいです';
         }
     }else if(kaisu===3){
         console.log('間違い。答えは'+kotae+'でした');
-        c.textConsole='間違い。答えは'+kotae+'でした';
+        c.textContent='間違い。答えは'+kotae+'でした';
     }else{
         console.log('答えは'+kotae+'でした。ゲームは既に終了しています');
         c.textContent='答えは'+kotae+'でした。ゲームは既に終了しています';
