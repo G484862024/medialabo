@@ -19,7 +19,7 @@ function hantei(){
     yoso=Number(a.value);
     kaisu=kaisu+1;
     console.log(kaisu+'回目の予想:'+yoso);
-    let b=document,querySelector('span#kaisu');
+    let b=document.querySelector('span#kaisu');
     b.textContent=yoso;
     let c=document.querySelector('p#result');
 
