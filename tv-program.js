@@ -4,17 +4,23 @@ function print(data) {
 
   let t=document.querySelector("#channel").value;
   let datalist=data.list[t];
-  
+
     for (let item of datalist) {
       console.log("タイトル: " + item.title);
       console.log("出演者: " + (item.act || "情報なし"));
       console.log("放送時間: " + item.start_time + " ～ " + item.end_time);
-      console.log("----------------------------");
     }
 }
 
 // 課題5-1 の関数 printDom() はここに記述すること
 function printDom(data) {
+  
+  let rem= document.querySelector('#result');
+  if (rem) {
+    rem.remove();
+  }
+
+
   let resultDiv=document.createElement('div');
   resultDiv.id='result';
   document.body.appendChild(resultDiv);
@@ -23,8 +29,8 @@ function printDom(data) {
   let datalist=data.list[t];
 
   for (let item of datalist) {
-    let title=document.createElement('p');
-    title.textContent="タイトル:"+item.title;
+    let title=document.createElement('h1');
+    title.textContent=item.title;
 
     let act=document.createElement('p');
     act.textContent="出演者:"+(item.act||"情報なし");
