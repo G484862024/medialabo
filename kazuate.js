@@ -23,7 +23,7 @@ function hantei(){
     let b=document.querySelector('span#kaisu');
     b.textContent=kaisu;
 
-    let yosomiru=document.querySelector('p#yosomiru');
+    let yosomiru=document.querySelector('span#answer');
     yosomiru.textContent=yoso;
 
     let c=document.querySelector('p#result');
