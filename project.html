@@ -5,20 +5,30 @@
         <script src="tv-program.js"defer></script>
     </head>
     <body>
-        <h1>プロジェクト課題</h1>
-        <h2>NHKの番組表</h2>
-        <h3>検索結果1件目</h3>
-        <p>開始時刻：2022/03/04 03:35</p>
-        <p>終了時刻：04:40</p>
-        <p>タイトル：みんなのうた「ごっつぉさま」/「超変身！ミネラルフォーマーズ」</p>
-        <p>番組説明：「ごっつぉさま」歌：須貝智郎/「ミネラルフォーマーズ」歌：鬼龍院翔fromゴールデンボンバー</p>
-        <h3>検索結果2件目</h3>
-        <p>開始時刻：23:05</p>
-        <p>終了時刻：23:10</p>
-        <p>タイトル：パラスポーツ×アニメ「アニ×パラ」</p>
-        <p>出演者：【声】松本まりか【出演】Awesome City Club 【監督】西村一彦【脚本】加納新太【原案】江口寿史</p>
+        
 
-        <label for="kensaku">検索キーワード：</label>
+        <label for="channel">チャンネル：</label>
+        <select id="channel">
+            <option value="g1">NHK総合</option>
+            <option value="e1">NHK教育</option>
+        </select>
+
+        <label for="jannru">ジャンル：</label>
+        <select id="jannru">
+            <option value="0000">ニュース・報道</option>
+            <option value="0100">スポーツ</option>
+            <option value="0205">情報・ワイドショー</option>
+            <option value="0300">ドラマ</option>
+            <option value="0409">音楽</option>
+            <option value="0502">バラエティ</option>
+            <option value="0600">映画</option>
+            <option value="0700">アニメ</option>
+            <option value="0800">ドキュメンタリー・教養</option>
+            <option value="0903">劇場・公演</option>
+            <option value="1000">趣味・教育</option>
+            <option value="1100">福祉</option>
+        </select>
+        
         <input type="text" name="kensaku" id="kensaku" size="10">
         <button id="print">検索</button>
         
