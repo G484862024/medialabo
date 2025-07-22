@@ -1,7 +1,11 @@
 
 // 課題3-2 のプログラムはこの関数の中に記述すること
 function print(data) {
-    for (let item of data.list.g1) {
+
+  let t=document.querySelector("#channel").value;
+  let datalist=data.list[t];
+  
+    for (let item of datalist) {
       console.log("タイトル: " + item.title);
       console.log("出演者: " + (item.act || "情報なし"));
       console.log("放送時間: " + item.start_time + " ～ " + item.end_time);
@@ -16,7 +20,7 @@ function printDom(data) {
   document.body.appendChild(resultDiv);
 
   let t=document.querySelector("#channel").value;
-  let datalist=data.List[x];
+  let datalist=data.list[t];
 
   for (let item of datalist) {
     let title=document.createElement('p');
