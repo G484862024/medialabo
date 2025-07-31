@@ -18,8 +18,21 @@ h1 {
 h2 {
 	font-family: cursive;
 	color:#3f3faf;
-	background:linear-gradient(white,#ffefaf);
+	background:linear-gradient(to right,white,#ffefaf);
 	margin:5px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;  
+    grid-template-rows: 1fr 1fr;    
+    gap: 10px;                     
+  }
+
+.grid-container > div {
+    background-color: #ffefaf;
+    padding: 10px;
+    border: 1px solid black;
 }
 
 div#zentai {
